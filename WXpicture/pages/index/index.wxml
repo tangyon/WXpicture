@@ -1,0 +1,33 @@
+<!--index.wxml-->
+<view class="container">
+		
+   <view class="userinfo" >
+    <input type="text" placeholder="搜索图片" class="input" 
+    bindinput="input" />
+  		<button class="btn" bindtap="search">搜索</button>
+  </view> 
+  
+  <view class="usermotto">
+    <view wx:for="{{nvb}}" bindtap='seek' data-item='{{item}}' data-index='{{index}}'                     awx:key="index"  class="{{inde== index ?'con nvb' :'nvb'}}">
+      {{item.name}}
+    </view>
+  </view>
+  <scroll-view
+  scroll-y
+  lower-threshold='800'
+  bindscrolltolower='tolower'
+ style='height:calc(100vh - 46px);'
+  >
+    <view class='img'>
+      <view wx:for="{{arr}}" wx:key='index'>
+        <image src='{{item.url?item.url:item.middleURL}}' 
+         bindtap="look" data-item='{{item}}'
+          data-index='{{index}}'
+          lazy-load=true
+         bindload='upload'></image>
+      </view>
+    </view>
+  </scroll-view>
+  
+    
+</view>

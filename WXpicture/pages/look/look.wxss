@@ -1,0 +1,35 @@
+/* pages/look/look.wxss */
+.box{
+	height: 100vh;
+	width: 100vw;
+	position: relative;
+}
+.img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	max-height: 768px;
+	max-width: 1024px;
+}
+.save {
+	width: 100%;
+	height: 50px;
+	background-color: pink;
+	text-align: center;
+	line-height: 50px;
+	position: fixed;
+	bottom: -50px;
+	left: 0;
+}
+.animation{
+	animation: .5s box;
+	transform: translateY(-50px);
+}
+@keyframes box{
+ from{
+	transform: translateY(0);
+ }
+ to{
+ 	
+ }
+}
