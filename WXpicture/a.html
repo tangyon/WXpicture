@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+	var str = 'aafcbad';
+    var obj = {};
+    var arr = [];
+    var letter;
+    for(var i = 0,len = str.length;i<len;i++){
+            letter = str[i];
+           
+        if(!obj[letter]){   // 第一次放进去
+            obj[letter] = 1;
+        }else{  
+            obj[letter]++;
+            }
+    }
+    console.log( obj)
+    var max_key,max_num=0;
+    for(key in obj){
+        if(max_num <obj[key]){
+            max_num = obj[key];
+            max_key = key;
+        }
+    }	
+    console.log(max_key,max_num)
+
+	</script>
+</html>
