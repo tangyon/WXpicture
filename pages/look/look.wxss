@@ -3,27 +3,32 @@
 	height: 100vh;
 	width: 100vw;
 	position: relative;
+	overflow: hidden;
 }
 .img{
 	position: absolute;
 	top: 0;
 	left: 0;
-	max-height: 768px;
-	max-width: 1024px;
+	margin: auto;
 }
 .save {
 	width: 100%;
-	height: 50px;
+	height: 100px;
 	background-color: pink;
 	text-align: center;
-	line-height: 50px;
 	position: fixed;
-	bottom: -50px;
+	bottom: -100px;
 	left: 0;
 }
+.save-child{
+	height: 50px;
+	width: 100%;
+	line-height: 50px;
+}
+
 .animation{
 	animation: .5s box;
-	transform: translateY(-50px);
+	transform: translateY(-100px);
 }
 @keyframes box{
  from{

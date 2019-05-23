@@ -98,13 +98,14 @@ Page({
 			inde: index,
 			id: id,
 			start: this.data.start,
-			cutApi: true
+			cutApi: true,
 		})
 		this.setData({
 			api:util.setApi(this),
 			arr: [],
 			imgsnum:0
 		})
+		console.log(this.data.value)
 		this.getDetails()
 	},
 	//	滑到到底部获取更多图片
@@ -126,7 +127,7 @@ Page({
 	},
 	// 查看大图
 	look(e) {
-
+		
 		let index = e.currentTarget.dataset.index
 		let data = JSON.stringify({
 			data: this.data.arr,
@@ -134,8 +135,10 @@ Page({
 			start: this.data.start,
 			id: this.data.id,
 			api: this.data.api,
-			value:this.data.value
+			value:this.data.value,
+			cutApi:this.data.cutApi
 		})
+		console.log(this.data.api)
 		wx.navigateTo({
 			url: '../look/look?data=' + encodeURIComponent(data)
 		})
@@ -169,6 +172,7 @@ Page({
 		console.log("搜索图片", this.data.value)
 		this.setData({
 			cutApi: false,
+			inde: null,
 		})
 		this.setData({
 			start:this.random(),
@@ -198,3 +202,5 @@ Page({
 		
 	}
 })
+
+

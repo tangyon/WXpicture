@@ -8,7 +8,8 @@
   </view> 
   
   <view class="usermotto">
-    <view wx:for="{{nvb}}" bindtap='seek' data-item='{{item}}' data-index='{{index}}'                     awx:key="index"  class="{{inde== index ?'con nvb' :'nvb'}}">
+    <view wx:for="{{nvb}}" bindtap='seek' data-item='{{item}}' data-index='{{index}}'
+      awx:key="index"  class="{{inde== index ?'con nvb' :'nvb'}}">
       {{item.name}}
     </view>
   </view>
@@ -16,7 +17,7 @@
   scroll-y
   lower-threshold='800'
   bindscrolltolower='tolower'
- style='height:calc(100vh - 46px);'
+  style='height:calc(100vh - 46px);'
   >
     <view class='img'>
       <view wx:for="{{arr}}" wx:key='index'>

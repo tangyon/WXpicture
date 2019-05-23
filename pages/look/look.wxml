@@ -1,0 +1,18 @@
+<!--pages/look/look.wxml-->
+<view class="box">
+  <image src='{{arr[index].img_1024_768?arr[index].img_1024_768:arr[index].middleURL}}' class='img' 
+	bindtouchstart="slide" 
+	bindtouchend="end"
+  bindtap="previewImage"
+  mode='aspectFill'
+  bindload='upload'
+  bindlongtap ='longPress'
+  style="height:{{imgHeight}};width:{{imgWidth}};left:{{left}}px;top:{{top}}px;bottom: 0px;right: 0px;"
+  catchtouchmove="touchMoveChange"
+>
+</image>
+</view>
+<view class="{{classname==true?'save animation':'save'}}">
+		<view bindtap="save" class="save-child"> 保存图片</view>
+		<view bindtap="share"  class="save-child">分享图片</view>
+</view>
